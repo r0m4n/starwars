@@ -1,0 +1,13 @@
+<div id="grid-container">
+  <h2>{{ selectedCharacterRoute?.name }}</h2>
+
+  <ag-grid-angular
+    id="character-grid"
+    style="width: 100%;"
+    class="ag-theme-balham"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    (gridReady)="onGridReady($event)"
+  >
+  </ag-grid-angular>
+</div>

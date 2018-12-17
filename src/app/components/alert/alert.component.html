@@ -1,0 +1,19 @@
+<div class="alert alert-danger alert-app-level" role="alert">
+  <div *ngFor="let alert of alerts" class="alert-item static">
+    <div class="alert-icon-wrapper">
+      <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+    </div>
+    <span class="alert-text">
+      {{ alert.message }}
+      <button
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="removeAlert(alert)"
+      >
+        <clr-icon aria-hidden="true" shape="close"></clr-icon>
+      </button>
+      <!-- <a class="close" (click)="removeAlert(alert)">&times;</a> -->
+    </span>
+  </div>
+</div>
